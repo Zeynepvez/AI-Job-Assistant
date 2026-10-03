@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Application Assistant</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="logo">AI Job<span> Assistant</span></div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Find your <span>perfect job match</span></h1>
+        <p>
+            Upload your CV and add a job advertisement.
+            Our AI will analyze how well your experience matches the role.
+        </p>
+    </section>
+
+    <section class="analyzer-card">
+
+        <div class="form-group">
+            <label for="cv">Upload your CV</label>
+            <div class="file-upload">
+                <input type="file" id="cv" accept=".pdf">
+                <label for="cv" class="file-button">
+                    Choose PDF
+                </label>
+                <span id="file-name">No file selected</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="jobUrl">Job advertisement URL</label>
+            <input
+                    type="text"
+                    id="jobUrl"
+                    placeholder="https://example.com/job"
+            >
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <button onclick="analyzeJob()">
+            Analyze job
+        </button>
+
+    </section>
+
+    <section class="results">
+
+        <div class="result-card">
+            <h2>Analysis result</h2>
+            <div id="result" class="result-text"></div>
+        </div>
+
+    </section>
+
+</main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
